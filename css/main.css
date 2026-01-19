@@ -8,10 +8,15 @@ body {
   font-family: var(--pico-font-family);
 }
 
+main.container {
+  max-width: 728px;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  place-items: center;
 }
 
 .gallery-btn {
@@ -30,4 +35,12 @@ body {
 dialog img {
   max-width: 100%;
   height: auto;
+}
+
+dialog.popover article {
+  text-align: center;
+}
+
+dialog.popover header {
+  min-height: 2rem;
 }
