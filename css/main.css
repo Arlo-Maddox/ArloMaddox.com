@@ -1,6 +1,6 @@
 @font-face {
- font-family: 'Permanent_Marker';
- src: url(PermanentMarker-Regular.ttf) format('truetype');
+  font-family: 'Permanent_Marker';
+  src: url(PermanentMarker-Regular.ttf) format('truetype');
 }
 
 body {
@@ -9,7 +9,8 @@ body {
 }
 
 main.container {
-  max-width: 728px;
+  max-width: 800px;
+  padding: 1rem;
 }
 
 h1 {
