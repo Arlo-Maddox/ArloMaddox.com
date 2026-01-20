@@ -53,3 +53,25 @@ dialog.popover article {
 dialog.popover header {
   min-height: 2rem;
 }
+
+/* Reusable corner ribbon */
+.sold-ribbon {
+  position: relative;
+  display: inline-block;
+}
+
+.sold-ribbon::before {
+  content: "SOLD";
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0.8); /* Red background with transparency */
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  transform: rotate(45deg);
+  transform-origin: top right;
+  z-index: 1;
+  pointer-events: none; /* Prevent interaction */
+}
