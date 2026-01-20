@@ -75,3 +75,7 @@ dialog.popover header {
   z-index: 1;
   pointer-events: none; /* Prevent interaction */
 }
+
+h2 {
+  font-size: x-large;
+}
