@@ -60,24 +60,23 @@ dialog.popover header {
 
 /* Reusable corner ribbon */
 .sold-ribbon {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.sold-ribbon::before {
+.sold-ribbon::after {
   content: "SOLD";
-  position: absolute;
-  top: 2.5rem;
-  right: 0;
-  background-color: rgba(255, 0, 0, 0.8); /* Red background with transparency */
+  background-color: var(--pico-primary);
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
   padding: 5px 10px;
-  transform: rotate(45deg);
-  transform-origin: top right;
-  z-index: 1;
-  pointer-events: none; /* Prevent interaction */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 h2 {
