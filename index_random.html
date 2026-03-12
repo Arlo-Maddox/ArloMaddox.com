@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <link rel="stylesheet" href="css/pico.zinc.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ARLO MADDOX</title>
+</head>
+
+<body>
+  <main class="container">
+        <nav>
+      <ul>
+        <li><a href="index.html">
+            <h1>Arlo Maddox</h1>
+          </a></li>
+      </ul>
+
+      <ul>
+        <li><button onclick="location.href='contact.html'">Contact</button></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li>Series:</li>
+        <li><a href="series_1.html">One</a></li>
+        <li><a href="series_2.html">Two</a></li>
+        <li><a href="series_3.html">Three</a></li>
+      </ul>
+    </nav>
+
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = [
+        'assets/images/cerulean-dream.jpeg', 'assets/images/prism-chorus.jpeg', 'assets/images/sepia-gesture.jpeg', 'assets/images/azure-veil.jpeg',
+        'assets/images/sienna-spiral.jpeg', 'assets/images/graphite-haze.jpeg', 'assets/images/vermilion-swirl.jpeg', 'assets/images/golden-echo.jpeg',
+        'assets/images/shadow-murmur.jpeg', 'assets/images/alabaster-ripple.jpeg', 'assets/images/moss-reverie.jpeg',
+        'assets/images/opaline-wash.jpeg', 'assets/images/lunar-fissure.jpeg', 'assets/images/vermilion-quiet.jpeg',
+        'assets/images/ochre-melody.jpeg', 'assets/images/frost-lilt.jpeg', 'assets/images/crimson-lattice.jpeg', 'assets/images/topaz-swoon.jpeg',
+        'assets/images/midnight-call.jpeg', 'assets/images/coral-breach.jpeg'
+      ];
+
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+      const container = document.querySelector('main.container');
+      const imgElement = document.createElement('img');
+      imgElement.src = randomImage;
+      imgElement.style.width = '100%';
+      imgElement.style.display = 'block';
+      container.appendChild(imgElement);
+    });
+  </script>
+</body>
+
+</html>

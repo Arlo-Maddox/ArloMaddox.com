@@ -7,7 +7,23 @@
   <meta name="color-scheme" content="light">
   <link rel="stylesheet" href="css/pico.zinc.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <title>ARLO MADDOX</title>
+  <script>
+    document.addEventListener('click', function (e) {
+      const targetBtn = e.target.closest('[data-target]');
+      if (targetBtn) {
+        const target = targetBtn.getAttribute('data-target');
+        const dialog = document.getElementById(target);
+        if (dialog) dialog.showModal();
+      }
+      const closeBtn = e.target.closest('[data-close]');
+      if (closeBtn) {
+        const target = closeBtn.getAttribute('data-target');
+        const dialog = document.getElementById(target);
+        if (dialog) dialog.close();
+      }
+    });
+  </script>
+  <title>Series Three - ARLO MADDOX</title>
 </head>
 
 <body>
@@ -31,28 +47,65 @@
         <li><a href="series_3.html">Three</a></li>
       </ul>
     </nav>
-
+    <h2>Flash Sale</h2>
+    <p>CALL FOR INQUIRIES: (360) 377-9982</p><p> Please leave a message if not answered.</p>
+    <div class="gallery-grid">
+    <button data-target="modal-signal-2026-03-11-190607-003" class="gallery-btn"><img src="assets/flash/signal-2026-03-11-190607_003.jpeg" alt=""></button>
+    <button data-target="modal-signal-2026-03-11-190607-004" class="gallery-btn"><img src="assets/flash/signal-2026-03-11-190607_004.jpeg" alt=""></button>
+      <button data-target="modal-coral-breach" class="gallery-btn"><img src="assets/flash/coral-breach.jpeg" alt=""></button>
+      <button data-target="modal-frost-lilt" class="gallery-btn"><img src="assets/flash/frost-lilt.jpeg" alt=""></button>
+      <button data-target="modal-midnight-call" class="gallery-btn"><img src="assets/flash/midnight-call.jpeg" alt=""></button>
+      <button data-target="modal-vermilion-swirl" class="gallery-btn"><img src="assets/flash/vermilion-swirl.jpeg" alt=""></button>
+    </div>
+    <dialog class="popover" id="modal-coral-breach">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" data-target="modal-coral-breach" data-close></button>
+        </header>
+        <img src="assets/flash/coral-breach.jpeg" alt="">
+      </article>
+    </dialog>
+    <dialog class="popover" id="modal-frost-lilt">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" data-target="modal-frost-lilt" data-close></button>
+        </header>
+        <img src="assets/flash/frost-lilt.jpeg" alt="">
+      </article>
+    </dialog>
+    <dialog class="popover" id="modal-midnight-call">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" data-target="modal-midnight-call" data-close></button>
+        </header>
+        <img src="assets/flash/midnight-call.jpeg" alt="">
+      </article>
+    </dialog>
+    <dialog class="popover" id="modal-signal-2026-03-11-190607-003">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" data-target="modal-signal-2026-03-11-190607-003" data-close></button>
+        </header>
+        <img src="assets/flash/signal-2026-03-11-190607_003.jpeg" alt="">
+      </article>
+    </dialog>
+    <dialog class="popover" id="modal-signal-2026-03-11-190607-004">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" data-target="modal-signal-2026-03-11-190607-004" data-close></button>
+        </header>
+        <img src="assets/flash/signal-2026-03-11-190607_004.jpeg" alt="">
+      </article>
+    </dialog>
+    <dialog class="popover" id="modal-vermilion-swirl">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" data-target="modal-vermilion-swirl" data-close></button>
+        </header>
+        <img src="assets/flash/vermilion-swirl.jpeg" alt="">
+      </article>
+    </dialog>
   </main>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const images = [
-        'assets/images/cerulean-dream.jpeg', 'assets/images/prism-chorus.jpeg', 'assets/images/sepia-gesture.jpeg', 'assets/images/azure-veil.jpeg',
-        'assets/images/sienna-spiral.jpeg', 'assets/images/graphite-haze.jpeg', 'assets/images/vermilion-swirl.jpeg', 'assets/images/golden-echo.jpeg',
-        'assets/images/shadow-murmur.jpeg', 'assets/images/alabaster-ripple.jpeg', 'assets/images/moss-reverie.jpeg',
-        'assets/images/opaline-wash.jpeg', 'assets/images/lunar-fissure.jpeg', 'assets/images/vermilion-quiet.jpeg',
-        'assets/images/ochre-melody.jpeg', 'assets/images/frost-lilt.jpeg', 'assets/images/crimson-lattice.jpeg', 'assets/images/topaz-swoon.jpeg',
-        'assets/images/midnight-call.jpeg', 'assets/images/coral-breach.jpeg'
-      ];
-
-      const randomImage = images[Math.floor(Math.random() * images.length)];
-      const container = document.querySelector('main.container');
-      const imgElement = document.createElement('img');
-      imgElement.src = randomImage;
-      imgElement.style.width = '100%';
-      imgElement.style.display = 'block';
-      container.appendChild(imgElement);
-    });
-  </script>
 </body>
 
 </html>
